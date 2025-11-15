@@ -1,0 +1,110 @@
+$footer-nav-link-text-color: #dadada;
+$footer-bg: rgb(44, 44, 44);
+
+footer {
+    a {
+        text-decoration: none;
+    }
+
+    .footer-logo-container {
+        text-align: center;
+
+        img {
+            width: 70px;
+        }
+    }
+
+    .me {
+        font-size: 0.7rem;
+        font-style: italic;
+    }
+
+    .container-fluid {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        text-align: center;
+        background-color: $footer-bg;
+        border-top: 1px solid #e7e7e7;
+
+        .footer-ad {
+            background-color: #fff;
+            width: 90%;
+            height: 140px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin: -60px auto 30px;
+            position: relative;
+            z-index: 3;
+
+            .col-md-6:nth-child(1) {
+                border-right: 0.5px solid #bcbce5;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            img{
+                width: 100%;
+                max-width: 100px;
+            }
+
+
+            @media screen and (min-width:772px) and (max-width:1280px) {
+                height: 180px;
+            }
+            
+            @media screen and (max-width:768px) {
+                width: 100%;
+                height: 465px;
+
+                .col-md-6:nth-child(1) {
+                    border-right: 0;
+                }
+            }
+        }
+
+        .social-icon-list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+
+            a {
+                fill: $footer-nav-link-text-color;
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+
+        .inc,
+        .me,
+        .me>a {
+            color: $footer-nav-link-text-color;
+
+        }
+
+        .footer-nav {
+            nav {
+                margin: auto;
+
+                ul {
+                    display: flex;
+                    gap: 30px;
+                    list-style: none;
+                    justify-content: center;
+
+                    li {
+                        a {
+                            color: $footer-nav-link-text-color
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
