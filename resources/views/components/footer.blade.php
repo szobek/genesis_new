@@ -75,7 +75,7 @@
     <div class="row text-center">
         <div class="col-12">
             <p class="text-center me mt-5">
-                Powered by <a href="">szobek</a>
+                Powered by <a href="https://www.szobekweb.hu/" target="_blank">szobek</a>
             </p>
         </div>
     </div>
