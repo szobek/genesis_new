@@ -6,7 +6,7 @@
         
         <ul class="custom-nav-menu">
             <li><a href="{{ route('pages.alkalmazastechnika') }}" class="{{ request()->routeIs('pages.alkalmazastechnika') ? 'active' : '' }}">Alkalmazástechnika</a></li>
-            <li><a href="{{ route('pages.teljesitmennyilatkozat') }}" class="{{ request()->routeIs('pages.teljesitmennyilatkozat') ? 'active' : '' }}">Teljesítménnyilatkozat</a></li>
+            {{-- <li><a href="{{ route('pages.teljesitmennyilatkozat') }}" class="{{ request()->routeIs('pages.teljesitmennyilatkozat') ? 'active' : '' }}">Teljesítménnyilatkozat</a></li> --}}
             <li>
                 <a href="{{ route('pages.blueprint-catalog') }}" 
                    class="{{ request()->routeIs('pages.blueprint-catalog') ? 'active' : '' }}">
