@@ -3,6 +3,8 @@
 namespace App\Mail;
 
 use App\Models\User;
+use App\Models\Msg;
+use App\Models\Tender;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
@@ -29,8 +31,14 @@ class WeeklyNewsletter extends Mailable
 
     public function content(): Content
     {
+         $msgs = Msg::all();
+            $tenders = Tender::all();
         return new Content(
             view: 'emails.weekly-newsletter',
+            with: [
+                'msgs' => $msgs,
+                'tenders' => $tenders,
+            ],
         );
     }
 }

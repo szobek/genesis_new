@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TenderController;
 use App\Http\Controllers\WelcomeController;
+use App\Mail\ContactMail;
 use App\Models\Ad;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -91,4 +92,14 @@ Route::get('/adatkezelesi-tajekoztato', function(){
 
 Route::get('/alkalmazastechnika', function(){
     return view('pages.alkalmazastechnika');
+})->name('pages.alkalmazastechnika');
+
+use App\Models\Msg;
+use App\Models\Tender;
+
+Route::get('/tester', function(){
+    $msgs=Msg::all();
+    $tenders=Tender::all();
+    return view('mail.weekdata',compact('msgs','tenders'));
+
 })->name('pages.alkalmazastechnika');
