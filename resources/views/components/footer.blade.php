@@ -61,6 +61,11 @@
                                     <img src="{{ asset('assets/images/icons/insta_icon.png') }}" alt="">
                                 </a>
                             </li>
+                            <li>
+                                <a href="">
+                                    <img src="{{ asset('assets/images/icons/tiktok_icon.png') }}" alt="">
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
