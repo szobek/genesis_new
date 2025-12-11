@@ -2,43 +2,61 @@
 
 namespace App\Mail;
 
-use App\Models\User;
-use App\Models\Msg;
-use App\Models\Tender;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Database\Eloquent\Collection; 
 
 class WeeklyNewsletter extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public User $user;
+    public Collection $msgs;
+    public Collection $tenders;
 
-    public function __construct(User $user)
+    /**
+     * Create a new message instance.
+     */
+    public function __construct(Collection $msgs, Collection $tenders)
     {
-        $this->user = $user;
+        $this->msgs = $msgs;
+        $this->tenders = $tenders;
     }
 
+    /**
+     * Get the message envelope.
+     */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Heti adatok a db-ből',
+            subject: 'Heti Jelentés: Kapcsolatfelvételek és Árajánlatkérések',
         );
     }
 
+    /**
+     * Get the message content definition.
+     */
     public function content(): Content
     {
-         $msgs = Msg::all();
-            $tenders = Tender::all();
         return new Content(
-            view: 'emails.weekly-newsletter',
+            view: 'mail.weekdata',
+            // Az adatokat a 'with' metódussal is átadhatod, ez a legtisztább
             with: [
-                'msgs' => $msgs,
-                'tenders' => $tenders,
+                'msgs' => $this->msgs,
+                'tenders' => $this->tenders,
             ],
         );
+    }
+
+    /**
+     * Get the attachments for the message.
+     *
+     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+     */
+    public function attachments(): array
+    {
+        return [];
     }
 }

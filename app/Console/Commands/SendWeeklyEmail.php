@@ -18,7 +18,7 @@ class SendWeeklyEmail extends Command
 
     public function handle()
     {
-         try {
+       try {
             $this->info('Weekly email process started...');
 
             // Adatok lekérdezése az adatbázisból az elmúlt 7 napra

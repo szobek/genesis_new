@@ -19,7 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withSchedule(function (Schedule $schedule) {
         $schedule->command('email:send-weekly')
-        ->weeklyOn(1, '19:25')
+        ->weeklyOn(4, '05:15')
         ->timezone('Europe/Budapest');
     })
     ->create();

@@ -120,6 +120,7 @@
                                 <tr><td class="label" style="padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 14px; color: #555555; font-weight: bold; width: 130px;">Hozzávetőlegesen hány nm2-es ingatlant szeretne?:</td><td style="padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 14px; color: #333333;">{{ $tender->area }}</td></tr>
                                 <tr><td class="label" style="padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 14px; color: #555555; font-weight: bold; width: 130px;">Készült már tervrajz az épületről?:</td><td style="padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 14px; color: #333333;">@if($tender->hasBlueprint) Igen @else Nem @endif</td></tr>
                                 <tr><td class="label" style="padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 14px; color: #555555; font-weight: bold; width: 130px;">Az építkezéshez van már alap?:</td><td style="padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 14px; color: #333333;">@if($tender->hasFoundation) Igen @else Nem @endif</td></tr>
+                                <tr><td class="label" style="padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 14px; color: #555555; font-weight: bold; width: 130px;">Dátum:</td><td style="padding: 12px 15px; border-bottom: 1px solid #f1f1f1; font-size: 14px; color: #333333;">{{ $tender->created_at }}</td></tr>
                             </table>
                         </div>
                     @empty
