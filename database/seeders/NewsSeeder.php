@@ -48,23 +48,5 @@ class NewsSeeder extends Seeder
             'tiktok_link' => 'https://www.tiktok.com/@genesis_hazakkft/video/7582506715464092950',
             'facebook_link' => 'https://www.facebook.com/reel/1479347113155233',
         ]);
-
-        News::create([
-            'title' => 'Lorem ipsum dolor sit amet',
-            'excerpt' => 'Lorem ipsum dolor sit amet',
-            'content' => <<<HTML
-                <p> Lorem ipsum dolor sit amet</p>
-                HTML,
-            'ogtitle' => '',
-            'ogdescription' => '',
-        ]);
-        News::create([
-            'title' => 'Lorem ipsum dolor sit amet',
-            'excerpt' => 'Lorem ipsum dolor sit amet',
-            'content' => <<<HTML
-                <p> Lorem ipsum dolor sit amet</p>
-                HTML,
-            'tiktok_link' => 'https://www.tiktok.com/@genesis_hazakkft/video/7582506715464092950',
-        ]);
     }
 }
