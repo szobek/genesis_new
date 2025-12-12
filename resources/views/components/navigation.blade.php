@@ -48,7 +48,7 @@
             </li>
             <li>
                 <a href="{{ route('pages.news') }}" 
-                   class="{{ request()->routeIs('pages.contact') ? 'active' : '' }}">
+                   class="{{ request()->routeIs('pages.news') ? 'active' : '' }}">
                     Hírek
                 </a>
             </li>
