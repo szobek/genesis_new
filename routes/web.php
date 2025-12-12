@@ -7,6 +7,7 @@ use App\Models\Ad;
 use Illuminate\Support\Facades\Route;
 
 require __DIR__ . '/blog.php';
+require __DIR__ . '/news.php';
 
 Route::get('/', [WelcomeController::class,'home_view'])->name('pages.welcome');
 

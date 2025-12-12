@@ -47,3 +47,7 @@ Breadcrumbs::for('pages.teljesitmennyilatkozat', fn (Trail $trail) =>
     $trail->parent('pages.welcome')->push('Teljesítménnyilatkozat', route('pages.teljesitmennyilatkozat'))
 );
 
+Breadcrumbs::for('pages.news', fn (Trail $trail) =>
+    $trail->parent('pages.welcome')->push('Hírek', route('pages.news'))
+);
+

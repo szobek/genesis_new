@@ -46,6 +46,12 @@
                     Kapcsolat
                 </a>
             </li>
+            <li>
+                <a href="{{ route('pages.news') }}" 
+                   class="{{ request()->routeIs('pages.contact') ? 'active' : '' }}">
+                    Hírek
+                </a>
+            </li>
            
         </ul>
 
