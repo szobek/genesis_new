@@ -6,16 +6,24 @@
     </div>
     <div class="about-genesis m-5">
         <div class="row">
-            <div class="col-md-6">
-                <x-carousel :slides="$why_genesis" />
-            </div>
-            <div class="col-md-6">
+            
+            <div class="col-md-12 text-center mb-4">
                 <h2>Miért pont a Genesis Házak?</h2>
                 <p>Az építkezés minden problémás lépését kiküszöböljük azzal, hogy a paneleket már a telephelyen készre
                     gyártjuk.</p>
                 <p>Sem speciális eszközökre, sem állványzatra, sem plusz munkaerőre nincs szükség, így elkerülhetőek a
                     magas járulékos költségek.</p>
                 <a href="{{ route('pages.genesis-houses') }}" class="btn btn-light">Ismerd meg!</a>
+            </div>
+            <div class="col-md-6">
+                <x-carousel :slides="$why_genesis" />
+            </div>
+            <div class="col-md-6">
+
+                <video width="100%" height="500" controls>
+                    <source src="{{ asset('assets/videos/sza_haz.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
 
@@ -68,7 +76,7 @@
             </div>
         </div>
     </div>
-    
 
-   
+
+
 </x-main-layout>
