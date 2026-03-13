@@ -5,6 +5,7 @@
         </a>
         
         <ul class="custom-nav-menu">
+            <li><a href="{{ route('pages.arlistas-termekismerteto') }}" class="{{ request()->routeIs('pages.arlistas-termekismerteto') ? 'active' : '' }}">Árlistás termèkismertető</a></li>
             <li><a href="{{ route('pages.alkalmazastechnika') }}" class="{{ request()->routeIs('pages.alkalmazastechnika') ? 'active' : '' }}">Alkalmazástechnika</a></li>
             {{-- <li><a href="{{ route('pages.teljesitmennyilatkozat') }}" class="{{ request()->routeIs('pages.teljesitmennyilatkozat') ? 'active' : '' }}">Teljesítménnyilatkozat</a></li> --}}
             <li>

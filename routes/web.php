@@ -94,4 +94,6 @@ Route::get('/alkalmazastechnika', function(){
 })->name('pages.alkalmazastechnika');
 
 
-
+Route::get('/arlistas-termekismerteto', function(){
+    return view('pages.arlistas-termekismerteto');
+})->name('pages.arlistas-termekismerteto');

@@ -51,3 +51,7 @@ Breadcrumbs::for('pages.news', fn (Trail $trail) =>
     $trail->parent('pages.welcome')->push('Hírek', route('pages.news'))
 );
 
+Breadcrumbs::for('pages.arlistas-termekismerteto', fn (Trail $trail) =>
+    $trail->parent('pages.welcome')->push('Árlistás termékismertető', route('pages.arlistas-termekismerteto'))
+);
+
