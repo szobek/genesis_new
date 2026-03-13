@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="components mt-3">
+    {{-- <div class="components mt-3">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center">Rendelhető előre gyártott elemek
@@ -54,7 +54,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="about-tender mb-3 p-5">
         <div class="row">
